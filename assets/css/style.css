@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cajaPadre{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 200px;
+   /*
+    column-gap: 10px;
+    row-gap: 10px;
+    */
+    gap: 10px;
+    
+}
+.cajaHijo1{
+    background-color: blue;
+    justify-self: center;
+    align-self: center;
+}
+.cajaHijo2{
+    background-color: brown;
+}
+.cajaHijo3{
+    background-color: green;
+}
+.cajaHijo4{
+    background-color: yellow;
+}
+/*ejemplo estructura*/
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 200px 200px 100px;
+    gap: 10px;
+    grid-template-areas: "nav header header header"
+                         "nav main main aside"
+                         "nav publi publi aside"
+                         "nav footer footer footer";
+}
+nav{
+    grid-area: nav;
+    background-color: aqua;
+}
+header{
+    grid-area: header;
+    background-color: blue;
+}
+main{
+    grid-area: main;
+    background-color: brown;
+}
+.publicidad{
+    grid-area: publi;
+    background-color: rgb(226, 43, 217);
+}
+aside{
+    grid-area: aside;
+    background-color: yellow;
+}
+footer{
+    grid-area: footer;
+    background-color: green;
+}
